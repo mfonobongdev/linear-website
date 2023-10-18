@@ -18,6 +18,7 @@ export default function Home() {
         <Image
           src={heroImg}
           alt='Screenshot of the Linear app showing the sidebar for the Encom workspace and a few of their projects in the roadmap.'
+          priority={true}
         />
       </Hero>
     </Container>

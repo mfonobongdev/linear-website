@@ -21,10 +21,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
+      <head>
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+      </head>
       <body className={roboto.className}>
         <div>
           <Header />
-          <main className='pt-[var(--navigation-height)]'>{children}</main>
+          <main className='pt-navigation-height'>{children}</main>
           <footer>
             <Container>footer</Container>
           </footer>
