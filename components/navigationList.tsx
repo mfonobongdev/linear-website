@@ -42,7 +42,7 @@ export default function NavigationList({
         variants={ulVariants}>
         {navigationItems?.map((item) => (
           <li
-            key={item.url}
+            key={item.name}
             className={cn(
               'flex h-navigation-height w-full items-center border-b border-grey-dark text-md transition-colors hover:text-grey'
             )}>

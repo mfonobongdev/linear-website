@@ -11,7 +11,7 @@ export default function NavigationRow({ navigationItems }: NavigationRowProps) {
       <ul className={cn('flex h-full flex-row')}>
         {navigationItems?.map((item) => (
           <li
-            key={item.url}
+            key={item.name}
             className={cn(
               'ml-6 text-sm transition-colors hover:text-grey',
               item?.important ? 'block' : 'md:hidden lg:block'

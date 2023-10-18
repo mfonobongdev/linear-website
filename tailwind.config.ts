@@ -36,6 +36,11 @@ const config: Config = {
       10: '4rem',
       11: '4.4rem',
       12: '4.8rem',
+      13: '5.2rem',
+      14: '5.6rem',
+      15: '6rem',
+      16: '6.4rem',
+      17: '6.8rem',
       'navigation-height': 'var(--navigation-height)'
     },
     backgroundImage: {

@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 import { Roboto } from 'next/font/google'
 import './globals.css'
-import Container from '@/components/container'
 import Header from '@/components/header'
+import Footer from '@/components/footer'
 
 const roboto = Roboto({
   weight: ['100', '300', '400', '500', '700', '900'],
@@ -28,9 +28,7 @@ export default function RootLayout({
         <div>
           <Header />
           <main className='pt-navigation-height'>{children}</main>
-          <footer>
-            <Container>footer</Container>
-          </footer>
+          <Footer />
         </div>
       </body>
     </html>
