@@ -3,11 +3,17 @@ export default function Hero({ children }: HeroProps) {
 }
 
 export function HeroTitle({ children }: HeroElementProps) {
-  return <h1 className='text-5xl my-6'>{children}</h1>
+  return (
+    <h1 className='md:text-8xl text-6xl text-gradient my-6 text-transparent'>
+      {children}
+    </h1>
+  )
 }
 
 export function HeroSubtitle({ children }: HeroElementProps) {
-  return <p className='text-lg mb-12'>{children}</p>
+  return (
+    <p className='md:text-xl text-primary-text mb-12 text-lg'>{children}</p>
+  )
 }
 
 type HeroProps = {

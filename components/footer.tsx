@@ -28,13 +28,17 @@ export default function Footer() {
             <div
               key={column?.title}
               className='mt-10 min-w-[50%] lg:mt-0 lg:min-w-[18rem]'>
-              <h3 className='mb-5 font-medium'>{column?.title}</h3>
+              <h3 className='text-primary-text mb-5 font-medium'>
+                {column?.title}
+              </h3>
               <ul>
                 {column?.links?.map((link) => (
-                  <li
-                    key={link?.title}
-                    className='mb-5 block text-grey last:mb-0'>
-                    <Link href={link?.href}>{link?.title}</Link>
+                  <li key={link?.title} className='mb-5 block last:mb-0'>
+                    <Link
+                      className='text-grey transition-colors hover:text-white'
+                      href={link?.href}>
+                      {link?.title}
+                    </Link>
                   </li>
                 ))}
               </ul>

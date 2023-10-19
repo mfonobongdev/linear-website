@@ -4,12 +4,15 @@ import cn from 'classnames'
 import Link from 'next/link'
 import React from 'react'
 import { motion } from 'framer-motion'
+import { useLockBodyScroll } from '@uidotdev/usehooks'
 import type { NavigationItem } from '@/constants/navigationItems'
 
 export default function NavigationList({
   navigationItems,
   isOpen
 }: NavigationListProps) {
+  useLockBodyScroll()
+
   // animations
   const navVariants = {
     isOpen: {

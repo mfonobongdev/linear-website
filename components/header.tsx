@@ -2,6 +2,7 @@
 
 import React from 'react'
 import Link from 'next/link'
+import { useWindowSize } from '@uidotdev/usehooks'
 import Container from './container'
 import Logo from './icons/logo'
 import Button from './button'
@@ -13,6 +14,9 @@ import NavigationList from './navigationList'
 export default function Header() {
   const [hamburgerMenuIsOpen, setHamburgerMenuIsOpen] = React.useState(false)
   const navigationItems = getNavigationItems()
+
+  const size = useWindowSize()
+  const isMobile = size?.width ? size?.width < 768 : false
 
   return (
     <header className='fixed left-0 top-0 w-full border-b border-white-a08 backdrop-blur-[12px]'>
@@ -26,10 +30,12 @@ export default function Header() {
         </div>
 
         <div className='block md:hidden'>
-          <NavigationList
-            navigationItems={navigationItems}
-            isOpen={hamburgerMenuIsOpen}
-          />
+          {hamburgerMenuIsOpen && isMobile && (
+            <NavigationList
+              navigationItems={navigationItems}
+              isOpen={hamburgerMenuIsOpen}
+            />
+          )}
         </div>
 
         <div className='ml-auto flex h-full items-center'>
