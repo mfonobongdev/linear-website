@@ -24,11 +24,12 @@ const config: Config = {
     colors: {
       transparent: 'transparent',
       white: '#fff',
-      'white-a08': 'rgba(255, 255, 255, 0.08)',
+      'off-white': '#f7f8f8',
       background: '#000212',
       grey: '#858699',
       'grey-dark': '#222326',
-      'primary-text': '#b4bcd0'
+      'primary-text': '#b4bcd0',
+      'transparent-white': 'rgba(255, 255, 255, 0.08)'
     },
     spacing: {
       0: '0',
@@ -59,6 +60,15 @@ const config: Config = {
     },
     boxShadow: {
       primary: 'rgb(80 63 205 / 50%) 0px 1px 40px'
+    },
+    keyframes: {
+      'fade-in': {
+        from: { opacity: '0', transform: 'translateY(-10px)' },
+        to: { opacity: '1', transform: 'none' }
+      }
+    },
+    animation: {
+      'fade-in': 'fade-in 1800ms var(--animation-delay, 0ms) ease forwards'
     }
   },
   plugins: []

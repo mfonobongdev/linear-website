@@ -19,7 +19,7 @@ export default function Header() {
   const isMobile = size?.width ? size?.width < 768 : false
 
   return (
-    <header className='fixed left-0 top-0 w-full border-b border-white-a08 backdrop-blur-[12px]'>
+    <header className='fixed left-0 top-0 w-full border-b border-transparent-white backdrop-blur-[12px]'>
       <Container className='flex h-navigation-height items-center'>
         <Link href={'/'}>
           <Logo className='mb-[0.2rem]' />
